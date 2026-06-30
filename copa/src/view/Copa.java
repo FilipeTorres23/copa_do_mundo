@@ -18,7 +18,8 @@ public class Copa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        TelaInicial janela = new TelaInicial();
+        janela.setVisible(true);
     }
     
 }
