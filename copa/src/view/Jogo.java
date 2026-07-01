@@ -381,7 +381,6 @@ public class Jogo extends javax.swing.JPanel {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
-        telaInicial.trocarTela(new TelaInicial(telaInicial));
     }//GEN-LAST:event_btnVoltarActionPerformed
 
 
