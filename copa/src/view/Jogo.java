@@ -4,7 +4,10 @@
  */
 package view;
 
-import javax.swing.JLabel;
+import controller.JogoController;
+import javax.swing.JButton;
+import model.Jogador;
+import model.Selecao;
 
 /**
  *
@@ -18,8 +21,32 @@ public class Jogo extends javax.swing.JPanel {
     public Jogo(TelaInicial telaInicial) {
         initComponents();
         this.telaInicial = telaInicial;
+        
+        jogadoresBtn = new JButton[] {
+            jogador1,
+            jogador2,
+            jogador3,
+            jogador4,
+            jogador5,
+            jogador6,
+            jogador7,
+            jogador8,
+            jogador9,
+            jogador10,
+            jogador11
+        };
+        carregaJogadores();
     }
 
+    public void carregaJogadores() {
+      Selecao selecao = jogoCtl.sortearSelecao();
+     
+      int i = 0;
+      for(Jogador jogador : selecao.getEscalacao()) {
+          System.out.println(jogador.getNome());
+          jogadoresBtn[i++].setText(jogador.getNome());
+      }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,7 +60,6 @@ public class Jogo extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         sorteio = new javax.swing.JPanel();
         selecao = new javax.swing.JLabel();
-        btnSorteio = new javax.swing.JButton();
         jogadores = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jogador1 = new javax.swing.JButton();
@@ -47,18 +73,8 @@ public class Jogo extends javax.swing.JPanel {
         jogador9 = new javax.swing.JButton();
         jogador10 = new javax.swing.JButton();
         jogador11 = new javax.swing.JButton();
-        jogador12 = new javax.swing.JButton();
-        jogador13 = new javax.swing.JButton();
-        jogador14 = new javax.swing.JButton();
-        jogador15 = new javax.swing.JButton();
-        jogador16 = new javax.swing.JButton();
-        jogador17 = new javax.swing.JButton();
-        jogador18 = new javax.swing.JButton();
-        jogador19 = new javax.swing.JButton();
-        jogador20 = new javax.swing.JButton();
-        jogador21 = new javax.swing.JButton();
-        jogador22 = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
+        txtSelecaoJogador = new javax.swing.JLabel();
         campo = new javax.swing.JPanel();
         ca = new javax.swing.JLabel();
         pd = new javax.swing.JLabel();
@@ -75,8 +91,6 @@ public class Jogo extends javax.swing.JPanel {
         sorteio.setBackground(new java.awt.Color(204, 255, 153));
 
         selecao.setText("Brasil");
-
-        btnSorteio.setText("sortear");
 
         jogadores.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -102,43 +116,6 @@ public class Jogo extends javax.swing.JPanel {
 
         jogador11.setText("jogador 11");
 
-        jogador12.setText("jogador 12");
-
-        jogador13.setText("jogador 13");
-        jogador13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jogador13ActionPerformed(evt);
-            }
-        });
-
-        jogador14.setText("jogador 14");
-
-        jogador15.setText("jogador 15");
-
-        jogador16.setText("jogador 16");
-
-        jogador17.setText("jogador 17");
-
-        jogador18.setText("jogador 18");
-        jogador18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jogador18ActionPerformed(evt);
-            }
-        });
-
-        jogador19.setText("jogador 19");
-
-        jogador20.setText("jogador 20");
-
-        jogador21.setText("jogador 21");
-        jogador21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jogador21ActionPerformed(evt);
-            }
-        });
-
-        jogador22.setText("jogador 22");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -156,22 +133,11 @@ public class Jogo extends javax.swing.JPanel {
                     .addComponent(jogador8)
                     .addComponent(jogador9)
                     .addComponent(jogador10)
-                    .addComponent(jogador11)
-                    .addComponent(jogador12)
-                    .addComponent(jogador13)
-                    .addComponent(jogador14)
-                    .addComponent(jogador15)
-                    .addComponent(jogador16)
-                    .addComponent(jogador17)
-                    .addComponent(jogador18)
-                    .addComponent(jogador19)
-                    .addComponent(jogador20)
-                    .addComponent(jogador21)
-                    .addComponent(jogador22))
+                    .addComponent(jogador11))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jogador1, jogador10, jogador11, jogador12, jogador13, jogador14, jogador15, jogador16, jogador17, jogador18, jogador19, jogador2, jogador20, jogador21, jogador22, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jogador1, jogador10, jogador11, jogador2, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,29 +164,7 @@ public class Jogo extends javax.swing.JPanel {
                 .addComponent(jogador10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jogador11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogador22)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(325, Short.MAX_VALUE))
         );
 
         jogadores.setViewportView(jPanel1);
@@ -232,6 +176,8 @@ public class Jogo extends javax.swing.JPanel {
             }
         });
 
+        txtSelecaoJogador.setText("Selecione o jogador desejado!");
+
         javax.swing.GroupLayout sorteioLayout = new javax.swing.GroupLayout(sorteio);
         sorteio.setLayout(sorteioLayout);
         sorteioLayout.setHorizontalGroup(
@@ -239,8 +185,8 @@ public class Jogo extends javax.swing.JPanel {
             .addGroup(sorteioLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSelecaoJogador)
                     .addComponent(btnVoltar)
-                    .addComponent(btnSorteio)
                     .addComponent(selecao, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(66, Short.MAX_VALUE))
@@ -248,9 +194,9 @@ public class Jogo extends javax.swing.JPanel {
         sorteioLayout.setVerticalGroup(
             sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sorteioLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(btnSorteio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
+                .addComponent(txtSelecaoJogador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(selecao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,26 +313,15 @@ public class Jogo extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jogador13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogador13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jogador13ActionPerformed
-
-    private void jogador18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogador18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jogador18ActionPerformed
-
-    private void jogador21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogador21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jogador21ActionPerformed
-
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
 
 
     private TelaInicial telaInicial;
+    private JogoController jogoCtl = new JogoController();
+    private JButton[] jogadoresBtn;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSorteio;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel ca;
     private javax.swing.JPanel campo;
@@ -397,18 +332,7 @@ public class Jogo extends javax.swing.JPanel {
     private javax.swing.JButton jogador1;
     private javax.swing.JButton jogador10;
     private javax.swing.JButton jogador11;
-    private javax.swing.JButton jogador12;
-    private javax.swing.JButton jogador13;
-    private javax.swing.JButton jogador14;
-    private javax.swing.JButton jogador15;
-    private javax.swing.JButton jogador16;
-    private javax.swing.JButton jogador17;
-    private javax.swing.JButton jogador18;
-    private javax.swing.JButton jogador19;
     private javax.swing.JButton jogador2;
-    private javax.swing.JButton jogador20;
-    private javax.swing.JButton jogador21;
-    private javax.swing.JButton jogador22;
     private javax.swing.JButton jogador3;
     private javax.swing.JButton jogador4;
     private javax.swing.JButton jogador5;
@@ -425,6 +349,7 @@ public class Jogo extends javax.swing.JPanel {
     private javax.swing.JLabel pe;
     private javax.swing.JLabel selecao;
     private javax.swing.JPanel sorteio;
+    private javax.swing.JLabel txtSelecaoJogador;
     private javax.swing.JLabel vol;
     private javax.swing.JLabel zag1;
     private javax.swing.JLabel zag2;

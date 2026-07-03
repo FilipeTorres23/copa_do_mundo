@@ -14,6 +14,7 @@ public class Selecao {
         this.ano = ano;
         this.escalacao = escalacao;
     }
+    
 
     public String getPais() {
         return pais;
@@ -38,32 +39,30 @@ public class Selecao {
     public void setEscalacao(ArrayList<Jogador> escalacao) {
         this.escalacao = escalacao;
     }
-    
-    /* 
-    
-     ----------METODOS A ADICIONAR--------
-    
-    calcularOverAllTotalDefesa {
-            Aqui, a gente pega o overall de defesa de cada jogador
-            Ai a gente faz uma media normal /11
-    }   
-    
-     calcularOverAllTotalAtaque {
-            Faz-se o mesmo que no metodo acima
-            Porem, aqui a gente usa o overall de ataque
+
+    public int getOverrAllTotalDefesa() {
+        return overrAllTotalDefesa;
     }
 
-    carregarArquivo() {
-        Recebemos as informacoes da selacao do arquivo
-    
-        !!!!! ESSA FUNÇAO TEM QUE ESTAR AQUI MESMO?? !!!!!
-    }
-    
-    adicionarJogador() {
-        Pega e adiciona um jogador a selecao
-        Vai ser mais usada quando o usuario montar a selecao dele
-        As outras selecoes ja sao pre-montadas no arquivo
+    public int getOverrAllTotalAtaque() {
+        return overrAllTotalAtaque;
     }
 
-    */
+    /**
+     * Calcula o OverAll total da selecao pela media do OverAll dos jogadores
+     * @param jogador
+     */
+    private void calcularOverAllTotal(Jogador jogador) {
+        this.overrAllTotalAtaque += (jogador.getOverallAtaque() / 11);
+        this.overrAllTotalDefesa += (jogador.getOverallDefesa() / 11);
+    }
+
+    /**
+     * Adiciona um jogador a selecao montada pelo usuario
+     * @param jogador
+     * @return
+     */
+    public boolean adicionarJogador(Jogador jogador) {
+        return escalacao.add(jogador);
+    }
 }
