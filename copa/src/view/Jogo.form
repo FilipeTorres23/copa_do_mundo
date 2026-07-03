@@ -62,8 +62,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="txtSelecaoJogador" min="-2" max="-2" attributes="0"/>
                       <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnSorteio" min="-2" max="-2" attributes="0"/>
                       <Component id="selecao" min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jogadores" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -74,9 +74,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Component id="btnSorteio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="txtSelecaoJogador" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="selecao" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jogadores" min="-2" pref="337" max="-2" attributes="0"/>
@@ -91,11 +91,6 @@
         <Component class="javax.swing.JLabel" name="selecao">
           <Properties>
             <Property name="text" type="java.lang.String" value="Brasil"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnSorteio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="sortear"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jogadores">
@@ -124,17 +119,6 @@
                               <Component id="jogador9" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jogador10" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jogador11" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador12" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador13" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador14" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador15" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador16" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador17" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador18" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador19" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador20" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador21" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador22" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="14" max="32767" attributes="0"/>
                       </Group>
@@ -165,29 +149,7 @@
                           <Component id="jogador10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jogador11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador13" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador14" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador15" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador16" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador17" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador18" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador19" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador20" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador21" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jogador22" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="325" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -248,70 +210,6 @@
                     <Property name="text" type="java.lang.String" value="jogador 11"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jogador12">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 12"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador13">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 13"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jogador13ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador14">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 14"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador15">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 15"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador16">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 16"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador17">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 17"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador18">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 18"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jogador18ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador19">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 19"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador20">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 20"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador21">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 21"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jogador21ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jogador22">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jogador 22"/>
-                  </Properties>
-                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -323,6 +221,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txtSelecaoJogador">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Selecione o jogador desejado!"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
