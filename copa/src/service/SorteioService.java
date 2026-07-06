@@ -51,11 +51,10 @@ public class SorteioService {
             String[] dados = linha.split(";");
             
             String nome = dados[0];
-            int ataque = Integer.parseInt(dados[1]);
-            int defesa = Integer.parseInt(dados[2]);
-            String posicao = dados[3];
+            int overall = Integer.parseInt(dados[1]);
+            String posicao = dados[2];
             
-            jogadores.add(new Jogador(nome, ataque, defesa, posicao));
+            jogadores.add(new Jogador(nome, overall, posicao));
         }
         String nome = nomeArquivo.replace(".txt", "");
         String[] dados = nome.split("_");

@@ -1,21 +1,21 @@
-David De Gea;90;69;gk
-Kepa Arrizabalaga;84;69;gk
-Pepe Reina;81;69;gk
-Dani Carvajal;85;69;ld
-Jordi Alba;87;69;le
-Sergio Ramos;90;69;za
-Gerard Piqué;88;69;za
-Nacho;84;69;za
-César Azpilicueta;85;69;za
-Sergio Busquets;89;69;mc
-Andrés Iniesta;87;69;mc
-Thiago Alcântara;86;69;mc
-Koke;85;69;mc
-Isco;87;69;mc
-Saúl Ñíguez;84;69;mc
-David Silva;88;69;mc
-Marco Asensio;84;69;at
-Lucas Vázquez;82;69;at
-Diego Costa;85;69;at
-Iago Aspas;84;69;at
-Rodrigo;82;69;at
+David De Gea;90;gk
+Kepa Arrizabalaga;84;gk
+Pepe Reina;81;gk
+Dani Carvajal;85;ld
+Jordi Alba;87;le
+Sergio Ramos;90;za
+Gerard Piqué;88;za
+Nacho;84;za
+César Azpilicueta;85;za
+Sergio Busquets;89;mc
+Andrés Iniesta;87;mc
+Thiago Alcântara;86;mc
+Koke;85;mc
+Isco;87;mc
+Saúl Ñíguez;84;mc
+David Silva;88;mc
+Marco Asensio;84;at
+Lucas Vázquez;82;at
+Diego Costa;85;at
+Iago Aspas;84;at
+Rodrigo;82;at

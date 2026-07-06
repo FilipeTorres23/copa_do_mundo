@@ -1,23 +1,23 @@
-Alisson;89;69;gk
-Ederson;88;69;gk
-Weverton;83;69;gk
-Danilo;81;69;ld
-Wesley;80;69;ld
-Marquinhos;87;69;za
-Bremer;86;69;za
-Gabriel Magalhães;86;69;za
-Léo Pereira;82;69;za
-Ibañez;82;69;za
-Alex Sandro;80;69;le
-Douglas Santos;81;69;le
-Casemiro;85;69;mc
-Bruno Guimarães;87;69;mc
-Andreas Pereira;83;69;mc
-Andrey Santos;82;69;mc
-Gerson;84;69;mc
-Neymar;86;69;at
-Vinícius Júnior;91;69;at
-Raphinha;89;69;at
-Endrick;84;69;at
-Gabriel Martinelli;85;69;at
-Matheus Cunha;84;69;at
+Alisson;89;gk
+Ederson;88;gk
+Weverton;83;gk
+Danilo;81;ld
+Wesley;80;ld
+Marquinhos;87;za
+Bremer;86;za
+Gabriel Magalhães;86;za
+Léo Pereira;82;za
+Ibañez;82;za
+Alex Sandro;80;le
+Douglas Santos;81;le
+Casemiro;85;mc
+Bruno Guimarães;87;mc
+Andreas Pereira;83;mc
+Andrey Santos;82;mc
+Gerson;84;mc
+Neymar;86;at
+Vinícius Júnior;91;at
+Raphinha;89;at
+Endrick;84;at
+Gabriel Martinelli;85;at
+Matheus Cunha;84;at

@@ -1,23 +1,23 @@
-Alisson;89;69;gk
-Ederson;85;69;gk
-Cássio;82;69;gk
-Danilo;81;69;ld
-Fagner;80;69;ld
-Thiago Silva;89;69;za
-Miranda;87;69;za
-Marquinhos;86;69;za
-Pedro Geromel;82;69;za
-Marcelo;88;69;le
-Filipe Luís;85;69;le
-Casemiro;89;69;mc
-Paulinho;84;69;mc
-Fernandinho;86;69;mc
-Renato Augusto;82;69;mc
-Philippe Coutinho;88;69;mc
-Willian;84;69;mc
-Douglas Costa;86;69;at
-Neymar;92;69;at
-Gabriel Jesus;83;69;at
-Roberto Firmino;86;69;at
-Taison;81;69;at
-Fred;79;69;mc
+Alisson;89;gk
+Ederson;85;gk
+Cássio;82;gk
+Danilo;81;ld
+Fagner;80;ld
+Thiago Silva;89;za
+Miranda;87;za
+Marquinhos;86;za
+Pedro Geromel;82;za
+Marcelo;88;le
+Filipe Luís;85;le
+Casemiro;89;mc
+Paulinho;84;mc
+Fernandinho;86;mc
+Renato Augusto;82;mc
+Philippe Coutinho;88;mc
+Willian;84;mc
+Douglas Costa;86;at
+Neymar;92;at
+Gabriel Jesus;83;at
+Roberto Firmino;86;at
+Taison;81;at
+Fred;79;mc

@@ -1,23 +1,23 @@
-Unai Simón;88;69;gk
-David Raya;87;69;gk
-Joan García;83;69;gk
-Pedro Porro;85;69;ld
-Marc Cucurella;86;69;le
-Alejandro Balde;85;69;le
-Pau Cubarsí;87;69;za
-Aymeric Laporte;86;69;za
-Robin Le Normand;85;69;za
-Dean Huijsen;84;69;za
-Rodri;92;69;mc
-Pedri;90;69;mc
-Gavi;87;69;mc
-Fabián Ruiz;87;69;mc
-Dani Olmo;87;69;mc
-Martín Zubimendi;86;69;mc
-Lamine Yamal;92;69;at
-Nico Williams;89;69;at
-Álex Baena;86;69;at
-Mikel Oyarzabal;87;69;at
-Ferran Torres;85;69;at
-Álvaro Morata;84;69;at
-Yeremy Pino;84;69;at
+Unai Simón;88;gk
+David Raya;87;gk
+Joan García;83;gk
+Pedro Porro;85;ld
+Marc Cucurella;86;le
+Alejandro Balde;85;le
+Pau Cubarsí;87;za
+Aymeric Laporte;86;za
+Robin Le Normand;85;za
+Dean Huijsen;84;za
+Rodri;92;mc
+Pedri;90;mc
+Gavi;87;mc
+Fabián Ruiz;87;mc
+Dani Olmo;87;mc
+Martín Zubimendi;86;mc
+Lamine Yamal;92;at
+Nico Williams;89;at
+Álex Baena;86;at
+Mikel Oyarzabal;87;at
+Ferran Torres;85;at
+Álvaro Morata;84;at
+Yeremy Pino;84;at
