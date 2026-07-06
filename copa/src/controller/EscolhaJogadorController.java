@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
-/**
- *
- * @author Samsung
- */
-public class EscolhaJogadorController {
+import java.util.ArrayList;
+import model.Jogador;
+import model.Selecao;
+
+public class SelecaoController {
+    private Selecao selecaoUsuario;
+
+    
+    public SelecaoJogadorController () {
+    
+    }
+    
+    public void adicionarJogador (Jogador jogador) {
+        // Aqui ocorre o tratamento de excecao
+        selecaoUsuario.adicionarJogador(jogador);
+    }
     
 }
