@@ -30,8 +30,48 @@ public class Partida {
     }
     
     public ResultadoPartida jogar () {
-        Random sortearVitoria = new Random();
+        Random sortearPartida = new Random();
         
+        while (true) {
+            
+            double probabilidadeUsuario = sortearPartida.nextDouble(1.0) + 0.2;
+            double probabilidadeAdversario = sortearPartida.nextDouble(1.0) + 0.2;
         
+            if (usuario.getOverrAllTotal() * probabilidadeUsuario > adversario.getOverrAllTotal() * probabilidadeAdversario) {
+           
+                // Aqui definimos um placar para a partida
+                while (true) {
+                    int golsUsuario = sortearPartida.nextInt(7);
+                    int golsAdversario = sortearPartida.nextInt(7);
+                    
+                    if (golsUsuario > golsAdversario) {
+                        String placar = golsUsuario + " x " + golsAdversario;
+                        return new ResultadoPartida(adversario, placar, true);
+                    } else {
+                        continue;
+                    }
+                    
+                }
+            }
+        
+            if (usuario.getOverrAllTotal() * probabilidadeUsuario < adversario.getOverrAllTotal() * probabilidadeAdversario) {
+                
+                while (true) {
+                    int golsUsuario = sortearPartida.nextInt(7);
+                    int golsAdversario = sortearPartida.nextInt(7);
+                    
+                    if (golsAdversario > golsUsuario) {
+                        String placar = golsUsuario + " x " + golsAdversario;
+                        return new ResultadoPartida(adversario, placar, false);
+                    } else {
+                        continue;
+                    }
+                }
+                
+            } else {
+                // Aqui e o caso de empate, voltamos ate nao dar empate
+                continue;
+            }
+        }
     }
 }
