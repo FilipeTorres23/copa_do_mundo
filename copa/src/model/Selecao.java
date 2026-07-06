@@ -15,6 +15,8 @@ public class Selecao {
         this.overrAllTotal = 0;
     }
 
+    public Selecao(){}
+
     public String getPais() {
         return pais;
     }

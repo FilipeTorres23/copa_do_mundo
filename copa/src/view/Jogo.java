@@ -4,8 +4,8 @@
  */
 package view;
 
-import controller.EscolhaJogadorController;
 import controller.JogoController;
+import controller.SelecaoController;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import model.Jogador;
@@ -59,11 +59,11 @@ public class Jogo extends javax.swing.JPanel {
       selecaoLabel.setText(selecao.getPais() + " - " + selecao.getAno());
       int i = 0;
       for(Jogador jogador : selecao.getEscalacao()) {
-          System.out.println(jogador.getNome());
           jogadoresBtn[i].setText(jogador.getNome());
           jogadoresBtn[i++].setName(jogador.getNome() + "_" + jogador.getOverall() + "_"  + jogador.getPosicao());
       }
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -522,9 +522,10 @@ public class Jogo extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void jogadorSelecionado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogadorSelecionado
-        String nome = ((JButton)evt.getSource()).getText();
-        String posicao = ((JButton)evt.getSource()).getName();
-        System.out.println("posicao " + posicao);
+        String[] dados = (((JButton)evt.getSource()).getName()).split("_");
+        String nome = dados[0];
+        int overall = Integer.parseInt(dados[1]);
+        String posicao = dados[2];
         int resposta = JOptionPane.showConfirmDialog(
                 this,
                 "Deseja escolher o jogador " + nome + " ?",
@@ -533,10 +534,9 @@ public class Jogo extends javax.swing.JPanel {
         );
         
         if(resposta == JOptionPane.YES_OPTION) {
-            
-            
-            System.out.println(nome);
-            //escolhaCtl.criarJogador(jogador, ABORT)
+            Jogador jogador = new Jogador(nome, overall, posicao);
+            escolhaCtl.adicionarJogador(jogador);
+            escolhaCtl.getSelecao();
             carregaJogadores();
         }
     }//GEN-LAST:event_jogadorSelecionado
@@ -544,7 +544,7 @@ public class Jogo extends javax.swing.JPanel {
 
     private TelaInicial telaInicial;
     private JogoController jogoCtl = new JogoController();
-    private EscolhaJogadorController escolhaCtl = new EscolhaJogadorController();
+    private SelecaoController escolhaCtl = new SelecaoController();
     private JButton[] jogadoresBtn;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVoltar;

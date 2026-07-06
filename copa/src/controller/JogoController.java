@@ -14,7 +14,6 @@ public class JogoController {
      * @return 
      */
     public Selecao sortearSelecao() {
-        System.out.println(sorteio.sortearSelecao());
         return sorteio.sortearSelecao();
     }
 }
