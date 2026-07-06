@@ -18,7 +18,6 @@ public class SelecaoController {
     }
     
     public void adicionarJogador (Jogador jogador) throws EscalacaoException {
-        // Aqui ocorre o tratamento de excecao
         if (limiteDeJogadoresAtingido()) {
             throw new EscalacaoException("A seleção já possui 11 jogadores.");
         } 
