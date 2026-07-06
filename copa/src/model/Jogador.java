@@ -2,14 +2,12 @@ package model;
 
 public class Jogador {
     private String nome;
-    private int overallAtaque;
-    private int overallDefesa;
+    private int overall;
     private String posicao;
 
-    public Jogador(String nome, int overallAtaque, int overallDefesa, String posicao) {
+    public Jogador(String nome, int overall, String posicao) {
         this.nome = nome;
-        this.overallAtaque = overallAtaque;
-        this.overallDefesa = overallDefesa;
+        this.overall = overall;
         this.posicao = posicao;
     }
 
@@ -21,20 +19,12 @@ public class Jogador {
         this.nome = nome;
     }
 
-    public int getOverallAtaque() {
-        return overallAtaque;
+    public int getOverall() {
+        return overall;
     }
 
-    public void setOverallAtaque(int overallAtaque) {
-        this.overallAtaque = overallAtaque;
-    }
-
-    public int getOverallDefesa() {
-        return overallDefesa;
-    }
-
-    public void setOverallDefesa(int overallDefesa) {
-        this.overallDefesa = overallDefesa;
+    public void setOverall(int overall) {
+        this.overall = overall;
     }
 
     public String getPosicao() {
