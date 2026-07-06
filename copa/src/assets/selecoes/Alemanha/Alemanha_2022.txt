@@ -1,0 +1,23 @@
+Manuel Neuer;90;69;gk
+Marc-André ter Stegen;89;69;gk
+Kevin Trapp;84;69;gk
+Thilo Kehrer;80;69;ld
+Lukas Klostermann;81;69;ld
+David Raum;82;69;le
+Christian Günter;81;69;le
+Antonio Rüdiger;87;69;za
+Niklas Süle;84;69;za
+Nico Schlotterbeck;83;69;za
+Matthias Ginter;82;69;za
+Armel Bella-Kotchap;80;69;za
+Joshua Kimmich;89;69;mc
+İlkay Gündoğan;86;69;mc
+Leon Goretzka;87;69;mc
+Jamal Musiala;84;69;mc
+Julian Brandt;83;69;mc
+Jonas Hofmann;82;69;mc
+Thomas Müller;86;69;at
+Kai Havertz;84;69;at
+Serge Gnabry;85;69;at
+Leroy Sané;85;69;at
+Youssoufa Moukoko;79;69;at

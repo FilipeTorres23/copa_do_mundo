@@ -1,0 +1,23 @@
+Unai Simón;84;69;gk
+David Raya;82;69;gk
+Robert Sánchez;81;69;gk
+Dani Carvajal;85;69;ld
+César Azpilicueta;82;69;ld
+Jordi Alba;84;69;le
+Alejandro Balde;81;69;le
+Aymeric Laporte;86;69;za
+Pau Torres;84;69;za
+Eric García;82;69;za
+Rodri;89;69;mc
+Sergio Busquets;85;69;mc
+Pedri;85;69;mc
+Gavi;83;69;mc
+Koke;84;69;mc
+Marcos Llorente;84;69;mc
+Carlos Soler;82;69;mc
+Marco Asensio;83;69;at
+Ferran Torres;84;69;at
+Álvaro Morata;84;69;at
+Nico Williams;81;69;at
+Yeremy Pino;81;69;at
+Ansu Fati;82;69;at

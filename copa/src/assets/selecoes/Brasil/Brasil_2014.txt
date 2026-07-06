@@ -1,0 +1,23 @@
+Júlio César;82;69;gk
+Jefferson;79;69;gk
+Victor;80;69;gk
+Daniel Alves;84;69;ld
+Maicon;81;69;ld
+Thiago Silva;88;69;za
+David Luiz;84;69;za
+Dante;82;69;za
+Henrique;77;69;za
+Marcelo;86;69;le
+Maxwell;80;69;le
+Luiz Gustavo;83;69;mc
+Paulinho;82;69;mc
+Fernandinho;81;69;mc
+Ramires;81;69;mc
+Hernanes;82;69;mc
+Oscar;84;69;mc
+Willian;82;69;mc
+Neymar;89;69;at
+Hulk;84;69;at
+Fred;80;69;at
+Jô;78;69;at
+Bernard;79;69;at
