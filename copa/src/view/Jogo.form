@@ -121,18 +121,18 @@
                               <Component id="jogador9" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jogador10" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jogador11" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador12" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador13" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador14" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador15" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador16" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador17" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador18" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador19" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador20" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador21" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador22" min="-2" max="-2" attributes="0"/>
-                              <Component id="jogador23" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador12" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador13" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador14" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador15" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador16" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador17" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador18" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador19" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador20" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador21" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador22" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jogador23" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="14" max="32767" attributes="0"/>
                       </Group>
@@ -418,7 +418,7 @@
                           <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="vol" min="-2" max="-2" attributes="0"/>
-                              <Component id="gol" min="-2" max="-2" attributes="0"/>
+                              <Component id="gk" min="-2" max="-2" attributes="0"/>
                               <Component id="ca" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -473,7 +473,7 @@
                       <Component id="ld" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="gol" min="-2" max="-2" attributes="0"/>
+                  <Component id="gk" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -482,17 +482,17 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="ca">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CA"/>
+            <Property name="text" type="java.lang.String" value="AT"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="pd">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PD"/>
+            <Property name="text" type="java.lang.String" value="AT"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="pe">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PE"/>
+            <Property name="text" type="java.lang.String" value="AT"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="mc">
@@ -502,12 +502,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="mei">
           <Properties>
-            <Property name="text" type="java.lang.String" value="MEI"/>
+            <Property name="text" type="java.lang.String" value="MC"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="vol">
           <Properties>
-            <Property name="text" type="java.lang.String" value="VOL"/>
+            <Property name="text" type="java.lang.String" value="MC"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="ld">
@@ -522,17 +522,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="zag2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ZAG"/>
+            <Property name="text" type="java.lang.String" value="ZA"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="zag1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ZAG"/>
+            <Property name="text" type="java.lang.String" value="ZA"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="gol">
+        <Component class="javax.swing.JLabel" name="gk">
           <Properties>
-            <Property name="text" type="java.lang.String" value="GOL"/>
+            <Property name="text" type="java.lang.String" value="GK"/>
           </Properties>
         </Component>
       </SubComponents>

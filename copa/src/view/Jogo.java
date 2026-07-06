@@ -8,6 +8,7 @@ import controller.JogoController;
 import controller.SelecaoController;
 import exception.EscalacaoException;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import model.Jogador;
 import model.Selecao;
@@ -24,6 +25,11 @@ public class Jogo extends javax.swing.JPanel {
     public Jogo(TelaInicial telaInicial) {
         initComponents();
         this.telaInicial = telaInicial;
+        
+        zagueirosLabel = new JLabel[]{zag1, zag2};
+        meiasLabel = new JLabel[]{mei, vol, mc};
+        atacantesLabel = new JLabel[]{pe, pd, ca};
+        
         
         jogadoresBtn = new JButton[] {
             jogador1,
@@ -60,9 +66,32 @@ public class Jogo extends javax.swing.JPanel {
       selecaoLabel.setText(selecao.getPais() + " - " + selecao.getAno());
       int i = 0;
       for(Jogador jogador : selecao.getEscalacao()) {
-          jogadoresBtn[i].setText(jogador.getNome());
+          jogadoresBtn[i].setText(jogador.getNome() + " - " + jogador.getPosicao());
           jogadoresBtn[i++].setName(jogador.getNome() + "_" + jogador.getOverall() + "_"  + jogador.getPosicao());
       }
+    }
+    
+    private void atualizarEscalacao(Jogador jogador){
+        switch(jogador.getPosicao()) {
+            case "gk" :
+                gk.setText(jogador.getNome());
+                break;
+            case "za" :
+                zagueirosLabel[qtdZagueiros++].setText(jogador.getNome());
+                break;
+            case "ld" :
+                ld.setText(jogador.getNome());
+                break;
+            case "le" :
+                le.setText(jogador.getNome());
+                break;
+            case "mc" :
+                meiasLabel[qtdMeias++].setText(jogador.getNome());
+                break;
+            case "at" :
+                atacantesLabel[qtdAtacantes++].setText(jogador.getNome());
+                break;
+        }
     }
     
     /**
@@ -116,7 +145,7 @@ public class Jogo extends javax.swing.JPanel {
         le = new javax.swing.JLabel();
         zag2 = new javax.swing.JLabel();
         zag1 = new javax.swing.JLabel();
-        gol = new javax.swing.JLabel();
+        gk = new javax.swing.JLabel();
 
         sorteio.setBackground(new java.awt.Color(204, 255, 153));
 
@@ -318,7 +347,7 @@ public class Jogo extends javax.swing.JPanel {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jogador1, jogador10, jogador11, jogador2, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jogador1, jogador10, jogador11, jogador12, jogador13, jogador14, jogador15, jogador16, jogador17, jogador18, jogador19, jogador2, jogador20, jogador21, jogador22, jogador23, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -413,27 +442,27 @@ public class Jogo extends javax.swing.JPanel {
 
         campo.setBackground(new java.awt.Color(0, 204, 204));
 
-        ca.setText("CA");
+        ca.setText("AT");
 
-        pd.setText("PD");
+        pd.setText("AT");
 
-        pe.setText("PE");
+        pe.setText("AT");
 
         mc.setText("MC");
 
-        mei.setText("MEI");
+        mei.setText("MC");
 
-        vol.setText("VOL");
+        vol.setText("MC");
 
         ld.setText("LD");
 
         le.setText("LE");
 
-        zag2.setText("ZAG");
+        zag2.setText("ZA");
 
-        zag1.setText("ZAG");
+        zag1.setText("ZA");
 
-        gol.setText("GOL");
+        gk.setText("GK");
 
         javax.swing.GroupLayout campoLayout = new javax.swing.GroupLayout(campo);
         campo.setLayout(campoLayout);
@@ -450,7 +479,7 @@ public class Jogo extends javax.swing.JPanel {
                         .addGap(126, 126, 126)
                         .addGroup(campoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(vol)
-                            .addComponent(gol)
+                            .addComponent(gk)
                             .addComponent(ca))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(campoLayout.createSequentialGroup()
@@ -493,7 +522,7 @@ public class Jogo extends javax.swing.JPanel {
                     .addComponent(zag2)
                     .addComponent(ld))
                 .addGap(14, 14, 14)
-                .addComponent(gol)
+                .addComponent(gk)
                 .addGap(21, 21, 21))
         );
 
@@ -540,6 +569,7 @@ public class Jogo extends javax.swing.JPanel {
                 System.out.println(nome + overall + posicao);
                 Jogador jogador = new Jogador(nome, overall, posicao);
                 escolhaCtl.adicionarJogador(jogador);
+                atualizarEscalacao(jogador);
                 carregaJogadores();
             } catch(EscalacaoException ex) {
                 JOptionPane.showMessageDialog(
@@ -556,11 +586,17 @@ public class Jogo extends javax.swing.JPanel {
     private JogoController jogoCtl = new JogoController();
     private SelecaoController escolhaCtl = new SelecaoController();
     private JButton[] jogadoresBtn;
+    private JLabel[] meiasLabel;
+    private JLabel[] atacantesLabel;
+    private JLabel[] zagueirosLabel;
+    private int qtdZagueiros = 0;
+    private int qtdMeias = 0;
+    private int qtdAtacantes = 0;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel ca;
     private javax.swing.JPanel campo;
-    private javax.swing.JLabel gol;
+    private javax.swing.JLabel gk;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
