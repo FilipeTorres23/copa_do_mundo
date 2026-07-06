@@ -6,15 +6,14 @@ public class Selecao {
     private String pais;
     private int ano;
     private ArrayList<Jogador> escalacao = new ArrayList<>();
-    private int overrAllTotalDefesa;
-    private int overrAllTotalAtaque;
+    private int overrAllTotal;
 
     public Selecao(String pais, int ano, ArrayList<Jogador> escalacao) {
         this.pais = pais;
         this.ano = ano;
         this.escalacao = escalacao;
+        this.overrAllTotal = 0;
     }
-    
 
     public String getPais() {
         return pais;
@@ -39,30 +38,14 @@ public class Selecao {
     public void setEscalacao(ArrayList<Jogador> escalacao) {
         this.escalacao = escalacao;
     }
-
-    public int getOverrAllTotalDefesa() {
-        return overrAllTotalDefesa;
+    
+    public void definirOverAllTotal (Jogador jogador) {
+        this.overrAllTotal += jogador.getOverall();
     }
-
-    public int getOverrAllTotalAtaque() {
-        return overrAllTotalAtaque;
-    }
-
-    /**
-     * Calcula o OverAll total da selecao pela media do OverAll dos jogadores
-     * @param jogador
-     */
-    private void calcularOverAllTotal(Jogador jogador) {
-        this.overrAllTotalAtaque += (jogador.getOverallAtaque() / 11);
-        this.overrAllTotalDefesa += (jogador.getOverallDefesa() / 11);
-    }
-
-    /**
-     * Adiciona um jogador a selecao montada pelo usuario
-     * @param jogador
-     * @return
-     */
-    public boolean adicionarJogador(Jogador jogador) {
-        return escalacao.add(jogador);
+    
+    
+    public void adicionarJogador(Jogador jogador) {
+        escalacao.add(jogador);
+        definirOverAllTotal(jogador);
     }
 }
