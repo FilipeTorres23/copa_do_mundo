@@ -536,7 +536,6 @@ public class Jogo extends javax.swing.JPanel {
         if(resposta == JOptionPane.YES_OPTION) {
             Jogador jogador = new Jogador(nome, overall, posicao);
             escolhaCtl.adicionarJogador(jogador);
-            escolhaCtl.getSelecao();
             carregaJogadores();
         }
     }//GEN-LAST:event_jogadorSelecionado
