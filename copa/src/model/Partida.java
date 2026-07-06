@@ -8,7 +8,7 @@ public class Partida {
     private Selecao adversario;
     private SorteioService sorteador;
 
-    public Partida(Selecao usuario, Selecao adversario) {
+    public Partida(Selecao usuario) {
         this.usuario = usuario;
         this.adversario = sorteador.sortearSelecao();
     }
