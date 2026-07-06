@@ -1,13 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author Samsung
- */
 public class ResultadoPartida {
+    private Selecao adversario;
+    private String placar;
+    private boolean vitoria;
+
+    public ResultadoPartida(Selecao adversario, String placar, boolean vitoria) {
+        this.adversario = adversario;
+        this.vitoria = vitoria;
+        this.placar = placar;
+    }
+    
+    public Selecao getAdversario() {
+        return adversario;
+    }
+
+    public void setAdversario(Selecao adversario) {
+        this.adversario = adversario;
+    }
+
+    public boolean getVitoria() {
+        return vitoria;
+    }
+
+    public void setVitoria(boolean vitoria) {
+        this.vitoria = vitoria;
+    }
+
+    public String getPlacar() {
+        return placar;
+    }
+
+    public void setPlacar(String placar) {
+        this.placar = placar;
+    }
     
 }
