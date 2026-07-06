@@ -61,7 +61,7 @@ public class Jogo extends javax.swing.JPanel {
       for(Jogador jogador : selecao.getEscalacao()) {
           System.out.println(jogador.getNome());
           jogadoresBtn[i].setText(jogador.getNome());
-          jogadoresBtn[i++].setName(jogador.getNome() + "_" + jogador.getPosicao());
+          jogadoresBtn[i++].setName(jogador.getNome() + "_" + jogador.getOverall() + "_"  + jogador.getPosicao());
       }
     }
     /**
@@ -200,84 +200,84 @@ public class Jogo extends javax.swing.JPanel {
             }
         });
 
-        jogador12.setText("jogador 12");
+        jogador12.setText("jogador 11");
         jogador12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador13.setText("jogador 13");
+        jogador13.setText("jogador 11");
         jogador13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador14.setText("jogador 14");
+        jogador14.setText("jogador 11");
         jogador14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador15.setText("jogador 15");
+        jogador15.setText("jogador 11");
         jogador15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador16.setText("jogador 16");
+        jogador16.setText("jogador 11");
         jogador16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador17.setText("jogador 17");
+        jogador17.setText("jogador 11");
         jogador17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador18.setText("jogador 18");
+        jogador18.setText("jogador 11");
         jogador18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador19.setText("jogador 19");
+        jogador19.setText("jogador 11");
         jogador19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador20.setText("jogador 20");
+        jogador20.setText("jogador 11");
         jogador20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador21.setText("jogador 21");
+        jogador21.setText("jogador 11");
         jogador21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador22.setText("jogador 22");
+        jogador22.setText("jogador 11");
         jogador22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
             }
         });
 
-        jogador23.setText("jogador 23");
+        jogador23.setText("jogador 11");
         jogador23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jogadorSelecionado(evt);
@@ -391,9 +391,8 @@ public class Jogo extends javax.swing.JPanel {
                 .addGroup(sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtSelecaoJogador)
                     .addComponent(btnVoltar)
-                    .addGroup(sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(selecaoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jogadores, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addComponent(selecaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         sorteioLayout.setVerticalGroup(
@@ -404,8 +403,8 @@ public class Jogo extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(selecaoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnVoltar)
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -514,7 +513,7 @@ public class Jogo extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sorteio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 15, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
