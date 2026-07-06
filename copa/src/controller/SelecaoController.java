@@ -7,21 +7,23 @@ import model.Selecao;
 public class SelecaoController {
     private Selecao selecaoUsuario;
 
-    
     public SelecaoController () {
-        this.selecaoUsuario = new Selecao();
+    
     }
     
     public void adicionarJogador (Jogador jogador) {
         // Aqui ocorre o tratamento de excecao
-        selecaoUsuario.adicionarJogador(jogador);
-    }
-
-    public void getSelecao() {
-        System.out.println("SELECAO USUARIO");
-        for(Jogador jogador : selecaoUsuario.getEscalacao()) {
-            System.out.println(jogador.getNome());
-        }
+        if (!limiteDeJogadoresAtingido()) {
+            selecaoUsuario.adicionarJogador(jogador);
+        } 
     }
     
+    
+    private boolean limiteDeJogadoresAtingido () {
+        if (selecaoUsuario.getEscalacao().size() == 11) {
+            return true;
+        }
+        
+        return false;
+    }
 }
