@@ -1,0 +1,23 @@
+Alisson;89;69;gk
+Ederson;89;69;gk
+Weverton;84;69;gk
+Danilo;84;69;ld
+Daniel Alves;78;69;ld
+Thiago Silva;86;69;za
+Marquinhos;88;69;za
+Bremer;84;69;za
+Éder Militão;86;69;za
+Alex Sandro;83;69;le
+Alex Telles;81;69;le
+Casemiro;89;69;mc
+Fabinho;86;69;mc
+Bruno Guimarães;84;69;mc
+Lucas Paquetá;83;69;mc
+Everton Ribeiro;81;69;mc
+Neymar;89;69;at
+Vinícius Júnior;86;69;at
+Richarlison;84;69;at
+Rodrygo;81;69;at
+Gabriel Martinelli;81;69;at
+Antony;82;69;at
+Gabriel Jesus;83;69;at

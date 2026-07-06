@@ -18,19 +18,24 @@ public class SorteioService {
      * @return 
      */
     private void carregarSelecoes() {        
-        File pasta = new File("src/assets/selecoes");
-        File[] arquivos = pasta.listFiles();
-        
-        for(File arquivo : arquivos) {
-            ManipulaArquivoTexto leitor = new ManipulaArquivoTexto(arquivo.getPath());
-            leitor.abrirArquivoLeitura();
-            
-            ArrayList<String> linhas = leitor.lerArquivo();
-            leitor.fecharArquivoLeitura();
-            
-            Selecao selecao = criarSelecao(arquivo.getName(), linhas);
-            selecoes.add(selecao);
+        File pastaSelecoes = new File("src/assets/selecoes");
+        File[] pastas = pastaSelecoes.listFiles();
+
+        for(File pastaPais : pastas) {
+            File[] arquivos = pastaPais.listFiles();
+
+            for(File arquivo : arquivos) {
+                ManipulaArquivoTexto leitor = new ManipulaArquivoTexto(arquivo.getPath());
+                leitor.abrirArquivoLeitura();
+                
+                ArrayList<String> linhas = leitor.lerArquivo();
+                leitor.fecharArquivoLeitura();
+                
+                Selecao selecao = criarSelecao(arquivo.getName(), linhas);
+                selecoes.add(selecao);
+            }
         }
+        
     }
     
     /**
@@ -43,7 +48,7 @@ public class SorteioService {
         ArrayList<Jogador> jogadores = new ArrayList<>();
         
         for(String linha : linhas) {
-            String[] dados = linha.split("_");
+            String[] dados = linha.split(";");
             
             String nome = dados[0];
             int ataque = Integer.parseInt(dados[1]);

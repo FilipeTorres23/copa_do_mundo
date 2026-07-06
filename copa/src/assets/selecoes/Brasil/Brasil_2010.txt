@@ -1,0 +1,23 @@
+Júlio César;88;69;gk
+Gomes;75;69;gk
+Doni;70;69;gk
+Maicon;88;69;ld
+Daniel Alves;86;69;ld
+Lúcio;86;69;za
+Juan;82;69;za
+Thiago Silva;84;69;za
+Luisão;80;69;za
+Michel Bastos;81;69;le
+Gilberto;78;69;le
+Gilberto Silva;80;69;mc
+Felipe Melo;81;69;mc
+Elano;85;69;mc
+Kaká;91;69;mc
+Ramires;81;69;mc
+Josué;78;69;mc
+Kléberson;75;69;mc
+Júlio Baptista;79;69;mc
+Robinho;86;69;at
+Luís Fabiano;85;69;at
+Nilmar;79;69;at
+Grafite;78;69;at

@@ -1,0 +1,22 @@
+Iker Casillas;91;69;gk
+Pepe Reina;84;69;gk
+Víctor Valdés;84;69;gk
+Sergio Ramos;86;69;ld
+Joan Capdevila;84;69;le
+Carles Puyol;88;69;za
+Gerard Piqué;85;69;za
+Raúl Albiol;83;69;za
+Carlos Marchena;83;69;za
+Xavi;92;69;mc
+Andrés Iniesta;91;69;mc
+Xabi Alonso;89;69;mc
+Sergio Busquets;85;69;mc
+Cesc Fàbregas;87;69;mc
+David Silva;86;69;mc
+Javi Martínez;81;69;mc
+Jesús Navas;84;69;at
+Pedro;84;69;at
+David Villa;89;69;at
+Fernando Torres;88;69;at
+Juan Mata;82;69;at
+Fernando Llorente;83;69;at
