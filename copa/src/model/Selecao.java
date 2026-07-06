@@ -50,4 +50,8 @@ public class Selecao {
         escalacao.add(jogador);
         definirOverAllTotal(jogador);
     }
+
+    public int getOverrAllTotal() {
+        return overrAllTotal;
+    }
 }

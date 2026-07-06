@@ -6,6 +6,7 @@ package view;
 
 import controller.JogoController;
 import controller.SelecaoController;
+import exception.EscalacaoException;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import model.Jogador;
@@ -391,8 +392,9 @@ public class Jogo extends javax.swing.JPanel {
                 .addGroup(sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtSelecaoJogador)
                     .addComponent(btnVoltar)
-                    .addComponent(selecaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jogadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(sorteioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(selecaoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jogadores, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         sorteioLayout.setVerticalGroup(
@@ -534,9 +536,18 @@ public class Jogo extends javax.swing.JPanel {
         );
         
         if(resposta == JOptionPane.YES_OPTION) {
-            Jogador jogador = new Jogador(nome, overall, posicao);
-            escolhaCtl.adicionarJogador(jogador);
-            carregaJogadores();
+            try {
+                System.out.println(nome + overall + posicao);
+                Jogador jogador = new Jogador(nome, overall, posicao);
+                escolhaCtl.adicionarJogador(jogador);
+                carregaJogadores();
+            } catch(EscalacaoException ex) {
+                JOptionPane.showMessageDialog(
+                this,
+                ex.getMessage(),
+                "Erro",
+                JOptionPane.ERROR_MESSAGE);
+                }
         }
     }//GEN-LAST:event_jogadorSelecionado
 
