@@ -6,7 +6,7 @@ import java.util.Random;
 public class Partida {
     private Selecao usuario;
     private Selecao adversario;
-    private SorteioService sorteador;
+    private SorteioService sorteador = new SorteioService();
 
     public Partida(Selecao usuario) {
         this.usuario = usuario;
@@ -35,7 +35,7 @@ public class Partida {
         while (true) {
             
             double probabilidadeUsuario = sortearPartida.nextDouble(1.0) + 0.2;
-            double probabilidadeAdversario = sortearPartida.nextDouble(1.0) + 0.2;
+            double probabilidadeAdversario = (sortearPartida.nextDouble(1.0) + 0.2 ) / 2.2;
         
             if (usuario.getOverrAllTotal() * probabilidadeUsuario > adversario.getOverrAllTotal() * probabilidadeAdversario) {
            

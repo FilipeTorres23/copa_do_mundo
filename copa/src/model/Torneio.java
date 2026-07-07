@@ -64,27 +64,27 @@ public class Torneio {
     public void mudarFaseAtual () {
         
         switch (partidasJogadas) {
-            case 0:
-            
             case 1:
-                
+            
             case 2:
+                
+            case 3:
                 this.faseAtual = "Fase de Grupos";
                 break;
                 
-            case 3:
+            case 4:
                 this.faseAtual = "Oitavas de Final";
                 break;
             
-            case 4:
+            case 5:
                 this.faseAtual = "Quartas de Final";
                 break;
                 
-            case 5:
+            case 6:
                 this.faseAtual = "Semifinais";
                 break;
                 
-            case 6:
+            case 7:
                 this.faseAtual = "Final";
                 break;
         }

@@ -11,6 +11,7 @@ public class SelecaoController {
 
     public SelecaoController () {
         this.selecaoUsuario = new Selecao();
+        selecaoUsuario.setPais("Time da casa");
     }
 
     public Selecao getSelecao() {

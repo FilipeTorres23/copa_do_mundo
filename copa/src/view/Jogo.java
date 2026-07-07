@@ -6,11 +6,16 @@ package view;
 
 import controller.JogoController;
 import controller.SelecaoController;
+import controller.TorneioController;
 import exception.EscalacaoException;
+import java.awt.Font;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import model.Jogador;
+import model.ResultadoPartida;
 import model.Selecao;
 
 /**
@@ -29,7 +34,7 @@ public class Jogo extends javax.swing.JPanel {
         zagueirosLabel = new JLabel[]{zag1, zag2};
         meiasLabel = new JLabel[]{mei, vol, mc};
         atacantesLabel = new JLabel[]{pe, pd, ca};
-        
+        painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         
         jogadoresBtn = new JButton[] {
             jogador1,
@@ -98,6 +103,20 @@ public class Jogo extends javax.swing.JPanel {
         btnSimular.setVisible(escolhaCtl.selecaoCompleta());
     }  
     
+    private void adicionarResultado(String fase, String usuario, String adversario, String placar, int ano) {
+        JLabel lblFase = new JLabel(fase);
+        lblFase.setFont(new Font("Arial", Font.BOLD, 16));
+
+        JLabel lblJogo = new JLabel(usuario + "  " + placar + "  " + adversario + " - " + ano);
+
+        painel.add(lblFase);
+        painel.add(lblJogo);
+        painel.add(Box.createVerticalStrut(10));
+
+        painel.revalidate();
+        painel.repaint();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -151,6 +170,8 @@ public class Jogo extends javax.swing.JPanel {
         zag1 = new javax.swing.JLabel();
         gk = new javax.swing.JLabel();
         btnSimular = new javax.swing.JButton();
+        painelTorneio = new javax.swing.JScrollPane();
+        painel = new javax.swing.JPanel();
 
         sorteio.setBackground(new java.awt.Color(204, 255, 153));
 
@@ -538,6 +559,21 @@ public class Jogo extends javax.swing.JPanel {
             }
         });
 
+        painelTorneio.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        javax.swing.GroupLayout painelLayout = new javax.swing.GroupLayout(painel);
+        painel.setLayout(painelLayout);
+        painelLayout.setHorizontalGroup(
+            painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 116, Short.MAX_VALUE)
+        );
+        painelLayout.setVerticalGroup(
+            painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 992, Short.MAX_VALUE)
+        );
+
+        painelTorneio.setViewportView(painel);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -545,11 +581,16 @@ public class Jogo extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sorteio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSimular))
                 .addGap(18, 18, 18))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(376, 376, 376)
+                    .addComponent(painelTorneio)
+                    .addGap(377, 377, 377)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -562,6 +603,11 @@ public class Jogo extends javax.swing.JPanel {
                         .addComponent(btnSimular))
                     .addComponent(sorteio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(54, 54, 54)
+                    .addComponent(painelTorneio, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(54, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -601,12 +647,21 @@ public class Jogo extends javax.swing.JPanel {
 
     private void btnSimularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimularActionPerformed
         // TODO add your handling code here:
+        ResultadoPartida resultado = torneioCtl.jogarPartida(escolhaCtl.getSelecao());
+        adicionarResultado(
+            torneioCtl.getTorneio().getFaseAtual(),
+            escolhaCtl.getSelecao().getPais(),
+            resultado.getAdversario().getPais(),
+            resultado.getPlacar(),
+            resultado.getAdversario().getAno()
+        );
     }//GEN-LAST:event_btnSimularActionPerformed
 
 
     private TelaInicial telaInicial;
     private JogoController jogoCtl = new JogoController();
     private SelecaoController escolhaCtl = new SelecaoController();
+    private TorneioController torneioCtl = new TorneioController();
     private JButton[] jogadoresBtn;
     private JLabel[] meiasLabel;
     private JLabel[] atacantesLabel;
@@ -651,6 +706,8 @@ public class Jogo extends javax.swing.JPanel {
     private javax.swing.JLabel le;
     private javax.swing.JLabel mc;
     private javax.swing.JLabel mei;
+    private javax.swing.JPanel painel;
+    private javax.swing.JScrollPane painelTorneio;
     private javax.swing.JLabel pd;
     private javax.swing.JLabel pe;
     private javax.swing.JLabel selecaoLabel;

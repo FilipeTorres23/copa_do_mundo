@@ -45,22 +45,30 @@ public class SorteioService {
      * @return 
      */
     private Selecao criarSelecao(String nomeArquivo, ArrayList<String> linhas) {
-        ArrayList<Jogador> jogadores = new ArrayList<>();
-        
-        for(String linha : linhas) {
-            String[] dados = linha.split(";");
-            
-            String nome = dados[0];
-            int overall = Integer.parseInt(dados[1]);
-            String posicao = dados[2];
-            
-            jogadores.add(new Jogador(nome, overall, posicao));
-        }
         String nome = nomeArquivo.replace(".txt", "");
-        String[] dados = nome.split("_");
-        String pais = dados[0];
-        int ano = Integer.parseInt(dados[1]);
-        return new Selecao(pais, ano, jogadores);
+        String[] dadosSelecao = nome.split("_");
+
+        String pais = dadosSelecao[0];
+        int ano = Integer.parseInt(dadosSelecao[1]);
+
+        Selecao selecao = new Selecao();
+        selecao.setPais(pais);
+        selecao.setAno(ano);
+
+        for (String linha : linhas) {
+
+            String[] dadosJogador = linha.split(";");
+
+            String nomeJogador = dadosJogador[0];
+            int overall = Integer.parseInt(dadosJogador[1]);
+            String posicao = dadosJogador[2];
+
+            Jogador jogador = new Jogador(nomeJogador, overall, posicao);
+
+            selecao.adicionarJogador(jogador);
+        }
+
+        return selecao;
     }
     
     /**
