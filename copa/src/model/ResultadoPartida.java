@@ -5,6 +5,13 @@ public class ResultadoPartida {
     private String placar;
     private boolean vitoria;
 
+     /**
+     * Cria um resultado de partida.
+     *
+     * @param adversario seleção adversária da partida
+     * @param placar placar final da partida
+     * @param vitoria indica se o usuário venceu
+     */
     public ResultadoPartida(Selecao adversario, String placar, boolean vitoria) {
         this.adversario = adversario;
         this.vitoria = vitoria;

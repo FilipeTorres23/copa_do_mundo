@@ -5,13 +5,18 @@ import service.SorteioService;
 public class JogoController {
     private SorteioService sorteio;
     
+    /**
+     * Inicializa o controlador e o serviço responsável
+     * pelo carregamento das seleções.
+     */
     public JogoController() {
         sorteio = new SorteioService();
     }
    
     /**
-     * Retorna uma selecao aleatoria
-     * @return 
+     * Sorteia uma seleção aleatória disponível no sistema.
+     *
+     * @return seleção sorteada
      */
     public Selecao sortearSelecao() {
         return sorteio.sortearSelecao();

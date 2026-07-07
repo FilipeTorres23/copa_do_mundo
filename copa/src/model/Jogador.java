@@ -5,6 +5,13 @@ public class Jogador {
     private int overall;
     private String posicao;
 
+    /**
+     * Cria um novo jogador.
+     *
+     * @param nome nome do jogador
+     * @param overall nota geral do jogador
+     * @param posicao posição em campo do jogador
+     */
     public Jogador(String nome, int overall, String posicao) {
         this.nome = nome;
         this.overall = overall;

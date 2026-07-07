@@ -46,6 +46,12 @@ public class Torneio {
         this.faseAtual = faseAtual;
     }
     
+    /**
+     * Registra uma vitória no campeonato.
+     *
+     * Atualiza a quantidade de vitórias,
+     * partidas jogadas e a fase atual do torneio.
+     */
     public void registrarVitoria () {
         this.vitorias += 1;
         this.resultadoAtual = true;
@@ -53,14 +59,23 @@ public class Torneio {
         mudarFaseAtual();
     }
     
-    
+    /**
+     * Registra uma derrota no campeonato.
+     *
+     * Atualiza a quantidade de derrotas,
+     * partidas jogadas e a fase atual do torneio.
+     */
     public void registrarDerrota () {
         this.derrotas += 1;
         this.resultadoAtual = false;
         this.partidasJogadas += 1;
         mudarFaseAtual();
     }
-    
+
+    /**
+     * Atualiza a fase atual do campeonato de acordo
+     * com a quantidade de partidas realizadas.
+     */
     public void mudarFaseAtual () {
         
         switch (partidasJogadas) {
@@ -90,7 +105,15 @@ public class Torneio {
         }
     }
     
-    
+    /**
+     * Verifica se o torneio foi encerrado.
+     *
+     * O torneio termina caso o usuário seja eliminado
+     * na fase de grupos ou perca uma partida eliminatória.
+     *
+     * @return true caso o torneio tenha acabado,
+     *         false caso ainda esteja em andamento
+     */
     public boolean acabou () {
         
         if (this.partidasJogadas < 3) {
@@ -101,8 +124,18 @@ public class Torneio {
         if (this.partidasJogadas == 3 && this.vitorias < 2) {
             return true;
         }
+
+        // fases eliminatórias:
+        // derrota encerra
+        if (!resultadoAtual) {
+            return true;
+        }
+
+        // venceu a final
+        if (partidasJogadas == 7) {
+            return true;
+        }
         
-        // Checamos o resultado mais recente
-        return this.resultadoAtual;
+      return false;
     }
 }

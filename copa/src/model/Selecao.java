@@ -8,6 +8,7 @@ public class Selecao {
     private ArrayList<Jogador> escalacao = new ArrayList<>();
     private int overrAllTotal;
 
+    
     public Selecao(String pais, int ano, ArrayList<Jogador> escalacao) {
         this.pais = pais;
         this.ano = ano;
@@ -41,11 +42,23 @@ public class Selecao {
         this.escalacao = escalacao;
     }
     
+    /**
+     * Soma o overall de um jogador ao overall total da seleção.
+     *
+     * @param jogador jogador utilizado para atualizar o overall total
+     */
     public void definirOverAllTotal (Jogador jogador) {
         this.overrAllTotal += jogador.getOverall();
     }
     
-    
+    /**
+     * Adiciona um jogador à escalação da seleção.
+     *
+     * O método também atualiza o overall total da seleção
+     * utilizando o overall do jogador inserido.
+     *
+     * @param jogador jogador que será adicionado à seleção
+     */
     public void adicionarJogador(Jogador jogador) {
         escalacao.add(jogador);
         definirOverAllTotal(jogador);

@@ -18,6 +18,14 @@ public class SelecaoController {
         return selecaoUsuario;
     }
     
+    /**
+     * Adiciona um jogador na seleção do usuário.
+     *
+     * Antes da inserção são verificadas regras como:
+     * limite máximo de jogadores e disponibilidade da posição.
+     *
+     * @param jogador jogador escolhido pelo usuário
+     */
     public void adicionarJogador (Jogador jogador) throws EscalacaoException {
         if (limiteDeJogadoresAtingido()) {
             throw new EscalacaoException("A seleção já possui 11 jogadores.");
@@ -62,7 +70,13 @@ public class SelecaoController {
         return true;
     }
     
-    
+    /**
+     * Verifica se a seleção já possui o limite máximo
+     * de jogadores permitidos.
+     *
+     * @return true caso possua 11 jogadores,
+     *         false caso ainda possa adicionar
+     */
     private boolean limiteDeJogadoresAtingido () {
         return selecaoUsuario.getEscalacao().size() >= 11;
     }

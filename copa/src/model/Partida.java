@@ -8,6 +8,11 @@ public class Partida {
     private Selecao adversario;
     private SorteioService sorteador = new SorteioService();
 
+    /**
+     * Cria uma nova partida entre duas seleções.
+     *
+     * @param usuario seleção controlada pelo jogador
+     */
     public Partida(Selecao usuario) {
         this.usuario = usuario;
         this.adversario = sorteador.sortearSelecao();
@@ -29,6 +34,15 @@ public class Partida {
         this.adversario = adversario;
     }
     
+    /**
+     * Simula a realização de uma partida.
+     *
+     * A vitória é definida através de uma comparação
+     * probabilística entre os overalls das seleções.
+     * Após definir o vencedor, um placar é gerado aleatoriamente.
+     *
+     * @return resultado contendo adversário, placar e vencedor da partida
+     */
     public ResultadoPartida jogar () {
         Random sortearPartida = new Random();
         
