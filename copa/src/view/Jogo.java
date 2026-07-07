@@ -25,7 +25,7 @@ public class Jogo extends javax.swing.JPanel {
     public Jogo(TelaInicial telaInicial) {
         initComponents();
         this.telaInicial = telaInicial;
-        
+        verificarSelecaoCompleta();
         zagueirosLabel = new JLabel[]{zag1, zag2};
         meiasLabel = new JLabel[]{mei, vol, mc};
         atacantesLabel = new JLabel[]{pe, pd, ca};
@@ -94,6 +94,10 @@ public class Jogo extends javax.swing.JPanel {
         }
     }
     
+    private void verificarSelecaoCompleta() {
+        btnSimular.setVisible(escolhaCtl.selecaoCompleta());
+    }  
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -146,6 +150,7 @@ public class Jogo extends javax.swing.JPanel {
         zag2 = new javax.swing.JLabel();
         zag1 = new javax.swing.JLabel();
         gk = new javax.swing.JLabel();
+        btnSimular = new javax.swing.JButton();
 
         sorteio.setBackground(new java.awt.Color(204, 255, 153));
 
@@ -526,6 +531,13 @@ public class Jogo extends javax.swing.JPanel {
                 .addGap(21, 21, 21))
         );
 
+        btnSimular.setText("Simular Torneio");
+        btnSimular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimularActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -534,7 +546,9 @@ public class Jogo extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(sorteio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSimular))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -542,7 +556,10 @@ public class Jogo extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSimular))
                     .addComponent(sorteio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -570,6 +587,7 @@ public class Jogo extends javax.swing.JPanel {
                 Jogador jogador = new Jogador(nome, overall, posicao);
                 escolhaCtl.adicionarJogador(jogador);
                 atualizarEscalacao(jogador);
+                verificarSelecaoCompleta();
                 carregaJogadores();
             } catch(EscalacaoException ex) {
                 JOptionPane.showMessageDialog(
@@ -580,6 +598,10 @@ public class Jogo extends javax.swing.JPanel {
                 }
         }
     }//GEN-LAST:event_jogadorSelecionado
+
+    private void btnSimularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimularActionPerformed
 
 
     private TelaInicial telaInicial;
@@ -593,6 +615,7 @@ public class Jogo extends javax.swing.JPanel {
     private int qtdMeias = 0;
     private int qtdAtacantes = 0;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSimular;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel ca;
     private javax.swing.JPanel campo;

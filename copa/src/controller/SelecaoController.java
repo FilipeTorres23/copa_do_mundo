@@ -65,4 +65,8 @@ public class SelecaoController {
     private boolean limiteDeJogadoresAtingido () {
         return selecaoUsuario.getEscalacao().size() >= 11;
     }
+
+    public boolean selecaoCompleta() {
+        return selecaoUsuario.getEscalacao().size() == 11;
+    }
 }
